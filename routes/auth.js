@@ -8,8 +8,14 @@ var router = express.Router();
 router.post('/register', async function(req, res, next) {
     try {
         const { user, email, password } = req.body;
+
+        //log com os dados do body
+        console.log(req.body, user, email, password);
+
+
         const hashedPassword = await bcrypt.hash(password, 10);
 
+        
         //verificar se o usuário já existe
         const userExists = await db('users').where({ user }).first();
         if (userExists) {
@@ -36,7 +42,7 @@ router.post('/login', async function(req, res, next) {
         if(!user || !password) {
             return res.status(400).json({ error: 'Credenciais inválidas' });
         }
-        
+
 
         // verificar se o usuário existe
         const userExists = await db('users').where({ user }).first();

@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const cors = require('cors'); // Importe o módulo cors
 
 const knex = require('knex');
 const db = knex(require('../knexfile')['development']);
+
 
 
 // Listando todos os clientes

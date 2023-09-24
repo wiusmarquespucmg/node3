@@ -4,12 +4,23 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const jwt = require('jsonwebtoken');
-
+var cors = require('cors'); // Importe o módulo cors
 var midlewareJWT = require('./midlewares/jwt');
 var auth = require('./routes/auth');
 var clientsRouter = require('./routes/clients');
 
 var app = express();
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso permite todas as origens temporariamente
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  res.setHeader('Connection', 'keep-alive');
+  res.setHeader('Keep-Alive', "timeout=5");
+  
+  next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/api/v1', cors());
 
 app.use('/api/v1', auth);
 app.use('/api/v1', midlewareJWT);
