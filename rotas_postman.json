@@ -192,13 +192,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{$puc_arq_node_api_e2}}/clients/7",
+							"raw": "{{$puc_arq_node_api_e2}}/clients/9",
 							"host": [
 								"{{$puc_arq_node_api_e2}}"
 							],
 							"path": [
 								"clients",
-								"7"
+								"9"
 							]
 						}
 					},
@@ -214,7 +214,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Marcos Rocha da Silva\",\r\n    \"email\": \"teste@marquinho.com\",\r\n    \"phone\": \"(31) 99999-9999\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Dio Brando brandinho o brando brandado\",\r\n    \"email\": \"teste@marquinho.com\",\r\n    \"phone\": \"(31) 99999-9999\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -243,7 +243,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Marcos Silvinha2\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Marcos Silvinha\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -251,13 +251,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{$puc_arq_node_api_e2}}/clients/8",
+							"raw": "{{$puc_arq_node_api_e2}}/clients/9",
 							"host": [
 								"{{$puc_arq_node_api_e2}}"
 							],
 							"path": [
 								"clients",
-								"8"
+								"9"
 							]
 						}
 					},
@@ -283,6 +283,246 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercicio 3",
+			"item": [
+				{
+					"name": "Clients",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{$puc_arq_node_api_e3_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$puc_arq_node_api_e3}}/clients",
+									"host": [
+										"{{$puc_arq_node_api_e3}}"
+									],
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{$puc_arq_node_api_e3_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$puc_arq_node_api_e3}}/clients/9",
+									"host": [
+										"{{$puc_arq_node_api_e3}}"
+									],
+									"path": [
+										"clients",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{$puc_arq_node_api_e3_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Dio Brando brandinho o brando brandado\",\r\n    \"email\": \"teste@marquinho.com\",\r\n    \"phone\": \"(31) 99999-9999\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{$puc_arq_node_api_e3}}/clients",
+									"host": [
+										"{{$puc_arq_node_api_e3}}"
+									],
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{$puc_arq_node_api_e3_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Marcos Silvinha\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{$puc_arq_node_api_e3}}/clients/9",
+									"host": [
+										"{{$puc_arq_node_api_e3}}"
+									],
+									"path": [
+										"clients",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{$puc_arq_node_api_e3_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{$puc_arq_node_api_e3}}/clients/8",
+									"host": [
+										"{{$puc_arq_node_api_e3}}"
+									],
+									"path": [
+										"clients",
+										"8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"wiusmarques\",\r\n    \"email\": \"wiusmarques.dev@outlook.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{$puc_arq_node_api_e3}}/register",
+									"host": [
+										"{{$puc_arq_node_api_e3}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"wiusmarques\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{$puc_arq_node_api_e3}}/login",
+									"host": [
+										"{{$puc_arq_node_api_e3}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
