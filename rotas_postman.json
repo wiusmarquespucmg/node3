@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "f83ac9be-484f-4228-b7f7-b2bc7f20276b",
+		"name": "Arquitetura Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29225687"
+	},
+	"item": [
+		{
+			"name": "Exercicio 1",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{$puc_arq_node_api_e1}}/produtos",
+							"host": [
+								"{{$puc_arq_node_api_e1}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "2",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{$puc_arq_node_api_e1}}/produtos/5",
+							"host": [
+								"{{$puc_arq_node_api_e1}}"
+							],
+							"path": [
+								"produtos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"Cristal Milagroso\",\r\n    \"valor\": 25.85,\r\n    \"marca\": \"FAKE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{$puc_arq_node_api_e1}}/produtos",
+							"host": [
+								"{{$puc_arq_node_api_e1}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"Chocoleitor Maroteitor\",\r\n    \"valor\": 8.00,\r\n    \"marca\": \"Banacorte\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{$puc_arq_node_api_e1}}/produtos/5",
+							"host": [
+								"{{$puc_arq_node_api_e1}}"
+							],
+							"path": [
+								"produtos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{$puc_arq_node_api_e1}}/produtos/3",
+							"host": [
+								"{{$puc_arq_node_api_e1}}"
+							],
+							"path": [
+								"produtos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercicio 2",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{$puc_arq_node_api_e2}}/clients",
+							"host": [
+								"{{$puc_arq_node_api_e2}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "2",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{$puc_arq_node_api_e2}}/clients/7",
+							"host": [
+								"{{$puc_arq_node_api_e2}}"
+							],
+							"path": [
+								"clients",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marcos Rocha da Silva\",\r\n    \"email\": \"teste@marquinho.com\",\r\n    \"phone\": \"(31) 99999-9999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{$puc_arq_node_api_e2}}/clients",
+							"host": [
+								"{{$puc_arq_node_api_e2}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marcos Silvinha2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{$puc_arq_node_api_e2}}/clients/8",
+							"host": [
+								"{{$puc_arq_node_api_e2}}"
+							],
+							"path": [
+								"clients",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{$puc_arq_node_api_e2}}/clients/8",
+							"host": [
+								"{{$puc_arq_node_api_e2}}"
+							],
+							"path": [
+								"clients",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "$api_arq_node",
+			"value": "http://localhost:8000"
+		},
+		{
+			"key": "$api_arquitetura_node_e1",
+			"value": "http://localhost:3000"
+		}
+	]
+}

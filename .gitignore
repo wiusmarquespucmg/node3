@@ -1,0 +1,5 @@
+//ignorando todos os arquivos padrões de uma aplicação express:
+
+node_modules
+npm-debug.log
+.env
